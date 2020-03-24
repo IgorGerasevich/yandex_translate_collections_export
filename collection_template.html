@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<style type="text/css">
+body{
+    background-color: #ffffff;
+   }
+ h1{color: black;
+  font-family: "Times New Roman", Times;
+  font-size: 32px;
+  text-align: center;
+}
+.main_block{
+  background-color: green
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+.record{
+  display: flex;
+  padding: 14px 16px;
+  font-size: 14px;
+  min-height: 16px;
+  text-align: left;
+  line-height: 15px;
+  border-bottom: 1px solid #e5e5e5;
+  list-style-type: none;
+}
+.word_block{
+  width: 330px;
+  padding: 0 4px;
+}
+</style>
+
+<body>
+ <div class="main_block">
+  <h1>{{ title }}</h1>
+  <ul>
+    {% for item in collection_elements %}
+    <li class="record">
+      <div class="word_block">{{item[0]}}</div>
+      <div class="word_block">{{item[1]}}</div>
+    </li>
+    {% endfor %}
+  </ul>
+
+</div>
+</body>
+</html>
